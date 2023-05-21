@@ -1,0 +1,131 @@
+.pro-Heading {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.pro-tabs-container {
+    display: flex;
+    flex: 3;
+
+}
+.single-tab {
+    flex: 1;
+    cursor: pointer;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #ff5e00;
+    color: white;
+    border-color: #ff5e00;
+
+}
+.bugsHead{
+    display: flex;
+    justify-content: center;
+   
+}
+.button2{
+    /* margin: 15px !important; */
+   position: absolute !important;
+   top: 0px;
+   right: 10px;
+
+}
+.bugss{
+    position: relative;
+}
+.headings{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+    margin: 20px auto;
+}
+.textTab{
+    width: 98%;
+    height: 20px;
+    
+}
+.headName{
+    margin: 10px 0px 20px 0px;
+    font-weight: bold;
+}
+.taskss{
+    position: relative;
+}
+.button3{
+    position: absolute !important;
+    right: 10px !important;
+    top :0px !important;
+
+}
+
+.submitButton{
+    display: flex;
+    justify-content: center;
+}
+.Modal-container {
+    height: 60vh !important;
+    overflow-y: auto;
+    border: 0px !important;
+}
+.dropdown{
+    margin-left: 0px;
+}
+.Buglist{
+    display : flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    width: 1000px;
+}
+.bugCheckbox{
+    padding: 25px;
+    width:5px;
+}
+.bugDescpn{
+    padding: 20px;
+    width: 745px;
+}
+.bugMember{
+    padding: 25px;
+    width:250px
+   
+}
+.Tasklist{
+    display : flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    width: 1000px;
+}
+.taskCheckbox{
+    padding: 25px;
+    width:5px;
+}
+.taskDescpn{
+    padding: 20px;
+    width: 745px;
+}
+.taskMember{
+    padding: 25px;
+    width:250px;
+}
+
+.arrow{
+    font-size: 30px !important;
+    font-weight: bold !important;
+}   
+.arrow:hover{
+    cursor: pointer;
+}
+.navPro{
+    display: flex;
+    justify-content: flex-start;
+}
+.power{
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
