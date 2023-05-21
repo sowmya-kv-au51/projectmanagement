@@ -118,14 +118,14 @@ export default function ProjectDetails(){
 
     const getSingleProject = () => {
         let projectName = window.location.pathname.replace("/details/", "")
-        axios.get(`http://localhost:5001/projects/${projectName}`).then((response) => {
+        axios.get(`https://project-managementbackend-production.up.railway.app/projects/${projectName}`).then((response) => {
             setProjectDetails(response.data[0])
             getListOfUsers()                
         });
     }
 
     const getListOfUsers = () => {
-        axios.get("http://localhost:5001/users/").then((response) => {
+        axios.get("https://project-managementbackend-production.up.railway.app/users/").then((response) => {
             setListOfUsers(response.data)
         });
     }
@@ -145,7 +145,7 @@ export default function ProjectDetails(){
         let projectName = window.location.pathname.replace("/details/", "")
         if(selectedTab === "Bugs") {
             axios
-            .post("http://localhost:5001/projects/bugs", {
+            .post("https://project-managementbackend-production.up.railway.app/projects/bugs", {
               projectName: projectName,
               checked: false,
               description: description,
@@ -157,7 +157,7 @@ export default function ProjectDetails(){
         }
         else {
             axios
-            .post("http://localhost:5001/projects/tasks", {
+            .post("https://project-managementbackend-production.up.railway.app/projects/tasks", {
               projectName: projectName,
               checked: false,
               description: description,
@@ -174,7 +174,7 @@ export default function ProjectDetails(){
         let projectName = window.location.pathname.replace("/details/", "")
         if(selectedTab === "Bugs") {
             axios
-            .patch("http://localhost:5001/projects/bugs", {
+            .patch("https://project-managementbackend-production.up.railway.app/projects/bugs", {
               projectName: projectName,
               checked: checked,
               description: description,
@@ -185,7 +185,7 @@ export default function ProjectDetails(){
         }
         else {
             axios
-            .patch("http://localhost:5001/projects/tasks", {
+            .patch("https://project-managementbackend-production.up.railway.app/projects/tasks", {
               projectName: projectName,
               checked: checked,
               description: description,

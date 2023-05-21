@@ -76,14 +76,14 @@ export default function Home() {
   const [description, setDescription]=React.useState("");
 
   React.useEffect(() => {
-    axios.get("http://localhost:5001/users/").then((response) => {
+    axios.get("https://project-managementbackend-production.up.railway.app/users/").then((response) => {
       setListOfUsers(response.data)
     });
     getProjects()
    }, [])
 
    const getProjects = () => {
-    axios.get("http://localhost:5001/projects/").then((response) => {
+    axios.get("https://project-managementbackend-production.up.railway.app/projects/").then((response) => {
       setProjects(response.data)
     });
    }
@@ -102,7 +102,7 @@ export default function Home() {
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:5001/projects/", {
+      .post("https://project-managementbackend-production.up.railway.app/projects/", {
         name: name,
         description: description,
         members: personName

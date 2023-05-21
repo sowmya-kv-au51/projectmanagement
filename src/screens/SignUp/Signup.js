@@ -21,7 +21,7 @@ const handleSubmit = async(event) => {
       phone: data.get("phone"),
       password: data.get("password"),
     })
-    const response = await callApi('http://localhost:5001/users', 'POST', body)
+    const response = await callApi('https://project-managementbackend-production.up.railway.app/users', 'POST', body)
 
   };
 
