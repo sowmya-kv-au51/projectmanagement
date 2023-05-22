@@ -56,7 +56,7 @@ const handleSubmit = async(event) => {
       }
       const data = await response.json();
       console.log(data)
-      localStorage.setItem("token", data.token)
+      // localStorage.setItem("token", data.token)
       //localStorage.setItem("type", data.type)
       setTimeout(() => {
         window.location.href="/"        
