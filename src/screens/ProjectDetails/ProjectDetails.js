@@ -168,6 +168,8 @@ export default function ProjectDetails(){
             });            
         }
         setOpen(false)
+        setDescriptionBug("")
+        setEmployeeName([])
     }
 
     const handleChecked = (checked, description) => {
