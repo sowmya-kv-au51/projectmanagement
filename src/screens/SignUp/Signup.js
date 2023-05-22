@@ -10,7 +10,6 @@ import Container from "@mui/material/Container";
 import { useEffect,useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 
-
 export default function SignUp() {
 const handleSubmit = async(event) => {
     event.preventDefault();
@@ -71,7 +70,23 @@ const handleSubmit = async(event) => {
 
   
   return (
+
+    <div>
+
+      {!localStorage.getItem("token") && <div style={{display: "flex", justifyContent: "flex-start", alignItems: "center", width: "100%", height: "50px", backgroundColor: "black"}}>
+        <div>
+          <Link style={{color: "white", margin: "0px 20px", textDecoration: "none", cursor: "pointer"}} href="/about-us">About Us </Link>
+        </div>
+        <div>
+          <Link style={{color: "white", margin: "0px 20px", textDecoration: "none", cursor: "pointer"}} href="/sign-up">Sign Up </Link>
+          <Link style={{color: "white", margin: "0px 20px", textDecoration: "none", cursor: "pointer"}} href="/">Sign In </Link>
+        </div>
+      </div>}
+
+
     <Container component="main" maxWidth="sm">
+      
+      
       <Box
         sx={{
           boxShadow: 3,
@@ -152,5 +167,6 @@ const handleSubmit = async(event) => {
         </Box>
       </Box>
     </Container>
+    </div>
   );
 }

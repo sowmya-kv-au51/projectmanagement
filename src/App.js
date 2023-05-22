@@ -1,17 +1,22 @@
 import React from "react";
 import SignUp from "./screens/SignUp/Signup";
 import SignIn from "./screens/SignIn/SignIn";
-//import Link from "@mui/material/Link";
+import Link from "@mui/material/Link";
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import ProjectDetails from "./screens/ProjectDetails/ProjectDetails";
+import AboutUs from "./AboutUs";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <SignIn/>,
+  },
+  {
+    path: "/about-us",
+    element: <AboutUs/>,
   },
   {
     path: "/sign-up",

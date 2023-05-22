@@ -12,6 +12,7 @@ import {useNavigate} from 'react-router-dom';
 
 
 export default function SignIn() {
+
   const handleSubmit = async(event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);    
@@ -73,6 +74,19 @@ export default function SignIn() {
   
 
   return (
+    <div>
+      {!localStorage.getItem("token") && <div style={{display: "flex", justifyContent: "flex-start", alignItems: "center", width: "100%", height: "50px", backgroundColor: "black"}}>
+        <div>
+          <Link style={{color: "white", margin: "0px 20px", textDecoration: "none", cursor: "pointer"}} href="/about-us">About Us </Link>
+        </div>
+        <div>
+          <Link style={{color: "white", margin: "0px 20px", textDecoration: "none", cursor: "pointer"}} href="/sign-up">Sign Up </Link>
+          <Link style={{color: "white", margin: "0px 20px", textDecoration: "none", cursor: "pointer"}} href="/">Sign In </Link>
+        </div>
+      </div>}
+
+   
+
     <Container component="main" maxWidth="sm">
       <Box
         sx={{
@@ -111,10 +125,10 @@ export default function SignIn() {
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
+          {/* <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
-          />
+          /> */}
           <Button
             type="submit"
             fullWidth
@@ -138,5 +152,6 @@ export default function SignIn() {
         </Box>
       </Box>
     </Container>
+    </div>
   );
 }
