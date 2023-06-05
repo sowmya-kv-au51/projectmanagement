@@ -30,7 +30,7 @@ class Document extends Component {
 				projectName: this.props.projectName
 			}
 			axios
-            .post("https://project-managementbackend-production.up.railway.app/projects/documents", body)
+            .post("https://project-management-backend-w32q.onrender.com/projects/documents", body)
             .then((response) => {
                 this.props.getSingleProject()
             });

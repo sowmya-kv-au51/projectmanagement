@@ -118,14 +118,14 @@ export default function ProjectDetails(){
 
     const getSingleProject = () => {
         let projectName = window.location.pathname.replace("/details/", "")
-        axios.get(`https://project-managementbackend-production.up.railway.app/projects/${projectName}`).then((response) => {
+        axios.get(`https://project-management-backend-w32q.onrender.com/projects/${projectName}`).then((response) => {
             setProjectDetails(response.data[0])
             getListOfUsers()                
         });
     }
 
     const getListOfUsers = () => {
-        axios.get("https://project-managementbackend-production.up.railway.app/users/").then((response) => {
+        axios.get("https://project-management-backend-w32q.onrender.com/users/").then((response) => {
             setListOfUsers(response.data)
         });
     }
@@ -145,7 +145,7 @@ export default function ProjectDetails(){
         let projectName = window.location.pathname.replace("/details/", "")
         if(selectedTab === "Bugs") {
             axios
-            .post("https://project-managementbackend-production.up.railway.app/projects/bugs", {
+            .post("https://project-management-backend-w32q.onrender.com/projects/bugs", {
               projectName: projectName,
               checked: false,
               description: description,
@@ -157,7 +157,7 @@ export default function ProjectDetails(){
         }
         else {
             axios
-            .post("https://project-managementbackend-production.up.railway.app/projects/tasks", {
+            .post("https://project-management-backend-w32q.onrender.com/projects/tasks", {
               projectName: projectName,
               checked: false,
               description: description,
@@ -169,14 +169,14 @@ export default function ProjectDetails(){
         }
         setOpen(false)
         setDescriptionBug("")
-        setEmployeeName([])
+        setEmployeeName()
     }
 
     const handleChecked = (checked, description) => {
         let projectName = window.location.pathname.replace("/details/", "")
         if(selectedTab === "Bugs") {
             axios
-            .patch("https://project-managementbackend-production.up.railway.app/projects/bugs", {
+            .patch("https://project-management-backend-w32q.onrender.com/projects/bugs", {
               projectName: projectName,
               checked: checked,
               description: description,
@@ -187,7 +187,7 @@ export default function ProjectDetails(){
         }
         else {
             axios
-            .patch("https://project-managementbackend-production.up.railway.app/projects/tasks", {
+            .patch("https://project-management-backend-w32q.onrender.com/projects/tasks", {
               projectName: projectName,
               checked: checked,
               description: description,

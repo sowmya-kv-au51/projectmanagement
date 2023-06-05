@@ -76,19 +76,17 @@ export default function Home() {
   const [description, setDescription]=React.useState("");
 
   React.useEffect(() => {
-    axios.get("https://project-managementbackend-production.up.railway.app/users/").then((response) => {
+    axios.get("https://project-management-backend-w32q.onrender.com/users/").then((response) => {
       setListOfUsers(response.data)
     });
     getProjects()
    }, [])
 
    const getProjects = () => {
-    axios.get("https://project-managementbackend-production.up.railway.app/projects/").then((response) => {
+    axios.get("https://project-management-backend-w32q.onrender.com/projects/").then((response) => {
       setProjects(response.data)
     });
    }
-
-  
 
    const handleChanges = (event) => {
     const {
@@ -102,7 +100,7 @@ export default function Home() {
 
   const handleSubmit = () => {
     axios
-      .post("https://project-managementbackend-production.up.railway.app/projects/", {
+      .post("https://project-management-backend-w32q.onrender.com/projects/", {
         name: name,
         description: description,
         members: personName
